@@ -1,0 +1,29 @@
+.Fold {
+	width: 100%;
+	height: 100vh;
+	background-image: url(./hero_desktop.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+@media (max-width: 700px) {
+	.Fold {
+		background-position: 60%;
+	}
+}
+
+.Fold_Container {
+	position: absolute;
+	top: 15%;
+	width: 100%;
+}
+
+.Fold_Sub {
+	margin: 0 100px;
+}
+
+@media (max-width: 700px) {
+	.Fold_Sub {
+		margin: 0 20px;
+	}
+}

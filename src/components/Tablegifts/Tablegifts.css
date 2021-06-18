@@ -1,0 +1,70 @@
+.Tablegifts_Container {
+	max-width: 620px;
+	display: grid;
+	grid-gap: 20px 20px;
+	/*grid-template-rows: 1fr;*/
+	grid-template-areas: "event create" ". admin";
+}
+
+@media (max-width: 700px) {
+	.Tablegifts_Container {
+		max-width: 100%;
+		grid-template-areas: "event" "create" "admin";
+	}
+}
+
+.Box_Right {
+	width: 100%;
+	display: grid;
+	grid-gap: 15px 0;
+}
+
+.Box_Left {
+	width: 100%;
+}
+
+.Form_Container {
+	background-color: #fff;
+}
+
+@media (max-width: 700px) {
+	.Form_Container {
+		display: none;
+	}
+}
+
+.Box_Button_Mobil {
+	display: none;
+}
+
+@media (max-width: 700px) {
+	.Box_Button_Mobil {
+		display: block;
+	}
+}
+
+.Box_Item {
+	padding: 10px;
+	background-color: #fff;
+}
+
+.Box_Title {
+	padding: 6px;
+	text-align: center;
+}
+
+.Form_Box {
+	padding: 10px;
+}
+
+.Input_Box {
+	margin-top: 10px;
+	width: 100%;
+}
+
+.Box_Footer {
+	display: flex;
+	align-items: center;
+	padding: 5px;
+	background-color: #f4f4f4;
+}
