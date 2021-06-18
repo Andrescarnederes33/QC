@@ -5,5 +5,5 @@
 .MiniCard_Image{
 	width: 150px;
 	height: auto;
-	background-color: red;
+	object-fit: cover;
 }

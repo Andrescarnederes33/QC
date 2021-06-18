@@ -1,10 +1,19 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from "react";
+import ReactDOM from "react-dom";
+
+/*Theme material Ui*/
+import { ThemeProvider } from "@material-ui/core/styles";
+import theme from "./utils/theme";
+
+/*Styles*/
+import "./index.css";
 
 /*Components*/
-import App from './components/App';
+import App from "./components/App";
 
 ReactDOM.render(
-        <App />,
-  document.getElementById('app')
+        <ThemeProvider theme={theme}>
+                <App />
+        </ThemeProvider>,
+        document.getElementById("app")
 );

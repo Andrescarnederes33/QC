@@ -1,9 +1,9 @@
 import React,{ useState } from "react";
 
 /*Components*/
-import Title from "../Title";
-import MiniCard from "../MiniCard";
-import Modal from "../Modal";
+import Title from "../../components/Title";
+import MiniCard from "../../components/MiniCard";
+import Modal from "../../components/Modal";
 
 /*Material Ui*/
 import Typography from "@material-ui/core/Typography";

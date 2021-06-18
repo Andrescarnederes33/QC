@@ -1,8 +1,8 @@
 import React from "react";
 
 /*Components*/
-import Title from "../Title";
-import CardColor from "../CardColor";
+import Title from "../../components/Title";
+import CardColor from "../../components/CardColor";
 
 /*Styles*/
 import "./styles.css";

@@ -1,7 +1,7 @@
 import React from "react";
 
 /*Components*/
-import Title from "../Title";
+import Title from "../../components/Title";
 
 /*Material Ui*/
 import Button from "@material-ui/core/Button";

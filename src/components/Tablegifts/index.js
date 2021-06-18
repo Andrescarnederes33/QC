@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+
+/*Hooks*/
+import useForm from "../../hooks/useForm";
 
 /*Material Ui*/
 import Typography from "@material-ui/core/Typography";
@@ -11,7 +14,7 @@ import Button from "@material-ui/core/Button";
 import SearchIcon from "@material-ui/icons/Search";
 
 /*Styles*/
-import "./Tablegifts.css";
+import "./styles.css";
 
 const CardBox = ({ title, subtitle, textButton }) => {
 	return (
@@ -34,6 +37,19 @@ const CardBox = ({ title, subtitle, textButton }) => {
 };
 
 const Tablegifts = () => {
+	const searched = () => {
+		console.log("Searched", values, select);
+	};
+
+	/*Hook Form*/
+	const [values, handleChange, handleSubmit] = useForm(searched);
+
+	const [select, setSelect] = useState("");
+
+	const handleSelect = (e) => {
+		setSelect(e.target.value);
+	};
+
 	return (
 		<div>
 			<Typography variant="h4" component="h3">
@@ -42,7 +58,7 @@ const Tablegifts = () => {
 			<br />
 			<div className="Tablegifts_Container">
 				<Box className="Box_Left">
-					<div className="Form_Container">
+					<form onSubmit={handleSubmit} className="Form_Container">
 						<div className="Box_Title">
 							<Typography variant="h6">Buscar Evento</Typography>
 						</div>
@@ -50,29 +66,40 @@ const Tablegifts = () => {
 						<div className="Form_Box">
 							<div className="Input_Box">
 								<TextField
-									fullWidth
 									size="small"
 									placeholder="Nombre de evento, Festejados"
 									variant="outlined"
+									name="email"
+									value={values.email || ""}
+									onChange={handleChange}
+									color="secondary"
+									fullWidth
 								/>
 							</div>
 							<div className="Input_Box">
 								<small>Fecha</small>
 								<TextField
-									fullWidth
 									type="date"
 									size="small"
+									name="date"
+									value={values.date || ""}
+									onChange={handleChange}
 									placeholder="Outlined"
+									color="secondary"
 									variant="outlined"
+									fullWidth
 								/>
 							</div>
 							<div className="Input_Box">
 								<small>Tipo</small>
-								<NativeSelect style={{ width: "100%" }}>
+								<NativeSelect
+									onChange={handleSelect}
+									value={select}
+									style={{ width: "100%" }}
+									color="secondary"
+								>
 									{/*<option aria-label="None" value="" />*/}
-									<option value="Boda" selected>
-										Boda
-									</option>
+									<option value="Boda">Boda</option>
 									<option value="Baby Shower">
 										Baby Shower
 									</option>
@@ -92,7 +119,11 @@ const Tablegifts = () => {
 							</div>
 
 							<div className="Input_Box">
-								<Button variant="contained" color="primary">
+								<Button
+									type="submit"
+									variant="contained"
+									color="primary"
+								>
 									Buscar
 								</Button>
 							</div>
@@ -113,7 +144,8 @@ const Tablegifts = () => {
 								</Typography>
 							</div>
 						</div>
-					</div>
+					</form>
+
 					<div className="Box_Button_Mobil">
 						<Button variant="contained" fullWidth color="primary">
 							Buscar un evento

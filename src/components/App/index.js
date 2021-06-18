@@ -1,8 +1,5 @@
 import React from 'react'
 
-/*Styles*/
-import "./App.css";
-
 /*Pages*/
 import Home from "../../pages/Home";
 
