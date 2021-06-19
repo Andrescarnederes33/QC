@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 
 /*Containers*/
-import Fold from "../components/Fold";
+import Fold from "../containers/Fold";
 import Functions from "../containers/Functions";
 import CallToAction from "../containers/CallToAction";
 import Events from "../containers/Events";

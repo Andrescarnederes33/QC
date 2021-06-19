@@ -5,9 +5,6 @@ import ReactDOM from "react-dom";
 import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "./utils/theme";
 
-/*Styles*/
-import "./index.css";
-
 /*Components*/
 import App from "./components/App";
 

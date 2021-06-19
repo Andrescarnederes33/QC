@@ -1,9 +1,7 @@
 .Flex_Cards{
-	/*margin: 0 100px;*/
 	display: flex;
 	grid-gap: 0 30px;
 	justify-content: space-around;
-	/*flex-wrap: wrap;*/
 }
 
 @media (max-width: 700px) {

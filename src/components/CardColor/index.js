@@ -7,28 +7,21 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 
 /*Styles*/
-import "./styles.css";
+import "./style.css";
 
-const CardColor = ({ title, textButton, link, image, widthImage, color }) => (
-	<Card
-		className="CardColor_Container"
-		style={{ backgroundColor: color || "#FFF" }}
-	>
-		<CardContent className="CardColor_Box">
-			<div className="CardColor_Text">
-				<div className="CardColor_Title">
-					<Typography variant="h6">{title || ""}</Typography>
+const CardColor = ({ title, textButton, link, image, widthImage, bgColor }) => (
+	<Card className="CardColor__Container" style={{ backgroundColor: bgColor }}>
+		<CardContent className="CardColor__Box">
+			<div className="CardColor__Text">
+				<div className="CardColor__Title">
+					<Typography variant="h6">{title}</Typography>
 				</div>
-				<div className="CardColor_Link">
-					<a href={link || "#"}>{textButton || ""}</a>
+				<div className="CardColor__Link">
+					<a href={link}>{textButton}</a>
 				</div>
 			</div>
-			<div className="CardColor_Image">
-				<img
-					src={image || ""}
-					alt="image"
-					width={widthImage || "100%"}
-				/>
+			<div className="CardColor__Image">
+				<img src={image} alt="image" width={widthImage} />
 			</div>
 		</CardContent>
 	</Card>

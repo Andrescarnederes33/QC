@@ -1,15 +1,13 @@
-body{
-	margin: 0;
-	font-family: sans-serif;
-}
-
-.Section{
+.Section {
 	padding: 50px 100px;
 }
 
 @media (max-width: 900px) {
-	.Section{
+	.Section {
 		padding: 25px 20px;
 	}
+}
 
+.Bg_One {
+	background-color: #f5f2f1;
 }
