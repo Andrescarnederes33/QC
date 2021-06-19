@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 
-/*Components*/
+/*Containers*/
 import Fold from "../components/Fold";
 import Functions from "../containers/Functions";
 import CallToAction from "../containers/CallToAction";

@@ -4,7 +4,7 @@ import React from "react";
 import Tablegifts from "../Tablegifts";
 
 /*Styles*/
-import "./Fold.css";
+import "./styles.css";
 
 const Fold = () => {
 	return (
