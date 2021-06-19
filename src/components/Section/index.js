@@ -4,7 +4,7 @@ import React from "react";
 import "./style.css";
 
 const Section = ({ children, classNameColor }) => (
-	<section className={`Section ${classNameColor}`}>{children}</section>
+	<section className={`Section_Container ${classNameColor}`}>{children}</section>
 );
 
 export default Section;

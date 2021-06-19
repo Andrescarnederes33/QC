@@ -1,7 +1,8 @@
-import React,{ useState } from "react";
+import React, { useState } from "react";
 
 /*Components*/
 import Title from "../../components/Title";
+import Section from "../../components/Section";
 import MiniCard from "../../components/MiniCard";
 import Modal from "../../components/Modal";
 
@@ -10,61 +11,75 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 
 /*Styles*/
-import "./styles.css";
+import "./style.css";
+
+const events = [
+	{
+		title: "Boda",
+		description:
+			"Dile “sí, acepto” y celebra tu boda con los mejores productos.",
+		image: "img/boda.jpg",
+		link: "#",
+	},
+	{
+		title: "Baby Shower",
+		description:
+			"Dile “sí, acepto” y celebra tu boda con los mejores productos.",
+		image: "img/baby-shower.jpg",
+		link: "#",
+	},
+	{
+		title: "Tu cumpleaños",
+		description:
+			"¡Un años más! Festeja a lo grande y recibe todo lo que soñaste.",
+		image: "img/cumple.jpg",
+		link: "#",
+	},
+	{
+		title: "Graduación",
+		description: "Tantos años de esfuerzo merecer recompensa.",
+		image: "img/graduacion.jpg",
+		link: "#",
+	},
+	{
+		title: "Despedida de soltera/o",
+		description: "¡Has que los preparativos sean más divertidos!",
+		image: "img/despedida.jpg",
+		link: "#",
+	},
+	{
+		title: "Tu nuevo hogar",
+		description: "Decora tu nuevo hogar con los mejores productos.",
+		image: "img/hogar.jpg",
+		link: "#",
+	},
+];
 
 const Banner = () => {
-
 	const [open, setOpen] = useState(false);
 
 	const handleClose = () => {
-		setOpen(false)
-	}
+		setOpen(false);
+	};
+
+	const openModal = () => {
+		setOpen(true);
+	};
 
 	return (
-		<div className="Section" style={{ backgroundColor: "#f5f2f1" }}>
+		<Section classNameColor="Section__Bg-two">
 			<Title text="Te acompañamos en cualquier evento" />
 			<br />
-			<div className="Flex_Events">
-				<MiniCard
-					title="Boda"
-					description="Dile “sí, acepto” y celebra tu boda con los mejores productos."
-					image="http://mesa-sears.serverless.com.mx/assets/img/home/boda.jpg"
-					link="#"
-				/>
-				<MiniCard
-					title="Baby Shower"
-					description="Dile “sí, acepto” y celebra tu boda con los mejores productos."
-					image="http://mesa-sears.serverless.com.mx/assets/img/home/baby.jpg"
-					link="#"
-				/>
-				<MiniCard
-					title="Tu cumpleaños"
-					description="¡Un años más! Festeja a lo grande y recibe todo lo que soñaste."
-					image="http://mesa-sears.serverless.com.mx/assets/img/home/baby.jpg"
-					link="#"
-				/>
-			</div>
-			<br />
-
-			<div className="Flex_Events">
-				<MiniCard
-					title="Graduación"
-					description="Dile “sí, acepto” y celebra tu boda con los mejores productos."
-					image="http://mesa-sears.serverless.com.mx/assets/img/home/graduacion.jpg"
-					link="#"
-				/>
-				<MiniCard
-					title="Despedida de soltera/o"
-					description="Dile “sí, acepto” y celebra tu boda con los mejores productos."
-					image="http://mesa-sears.serverless.com.mx/assets/img/home/despedida.jpg"
-					link="#"
-				/>
-				<MiniCard
-					title="Tu nuevo hogar"
-					description="¡Un años más! Festeja a lo grande y recibe todo lo que soñaste."
-					image="http://mesa-sears.serverless.com.mx/assets/img/home/hogar.jpg"
-					link="#"
-				/>
+			<div className="Section__Grid-events">
+				{events.map((item, index) => (
+					<MiniCard
+						key={index}
+						title={item.title}
+						description={item.description}
+						image={item.image}
+						link={item.link}
+					/>
+				))}
 			</div>
 
 			<br />
@@ -78,14 +93,16 @@ const Banner = () => {
 				tu evento sea inolvidable.
 			</Typography>
 			<br />
-			
+
 			{/*Modal Login*/}
 			<Modal open={open} handleClose={handleClose} />
 
-			<Button onClick={() => setOpen(true)} variant="contained" color="primary">
-				Crea tu mesa
-			</Button>
-		</div>
+			<center>
+				<Button onClick={openModal} variant="contained" color="primary">
+					Crea tu mesa
+				</Button>
+			</center>
+		</Section>
 	);
 };
 

@@ -7,15 +7,15 @@ import Title from "../../components/Title";
 import Button from "@material-ui/core/Button";
 
 /*Styles*/
-import "./styles.css";
+import "./style.css";
 
 const Banner = () => {
 	return (
-		<div className="Banner">
-			<div className="Box_Banner_Left">
+		<div className="Banner__Container">
+			<div className="Banner_Box-left">
 				<Title text="La mejor mesa para cualquier evento" />
 
-				<ul>
+				<ul className="Banner__Box-list">
 					<li>Miles de productos en un solo lugar</li>
 					<li>Súper fácil para ti y tus invitados</li>
 					<li>
@@ -28,10 +28,10 @@ const Banner = () => {
 					Crea tu mesa
 				</Button>
 			</div>
-			<div className="Box_Banner_Right">
+			<div className="Banner_Box-right">
 				<img
-					className="Banner_Image"
-					src="http://mesa-sears.serverless.com.mx/assets/img/home/banner1.png"
+					className="Banner__Image"
+					src="img/banner.png"
 					alt="Image"
 				/>
 			</div>

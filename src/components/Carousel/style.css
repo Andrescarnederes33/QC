@@ -1,0 +1,23 @@
+.Carousel__Button-left {
+	position: absolute !important;
+	top: 50%;
+	z-index: 2;
+	background-color: #fff !important;
+	transform: translateY(-50%);
+	left: -1em;
+	box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.Carousel__Button-right {
+	position: absolute !important;
+	top: 50%;
+	z-index: 2;
+	background-color: #fff !important;
+	transform: translateY(-50%);
+	right: -1em;
+	box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.Carousel__Button-icon {
+	color: #f7931e;
+}

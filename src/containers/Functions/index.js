@@ -8,44 +8,53 @@ import CardColor from "../../components/CardColor";
 /*Styles*/
 import "./style.css";
 
+/*List Functions*/
+const functions = [
+	{
+		classNameColor: "Card__Bg-one",
+		title: "1. Elige un tipo de evento",
+		image: "img/step1.png",
+		textButton: "Ver tipos de eventos",
+		link: "#",
+	},
+	{
+		classNameColor: "Card__Bg-two",
+		title: "2. Selecciona cómo recibir tus regalos",
+		image: "img/step2.png",
+		textButton: "Ver nuestros planes",
+		link: "#",
+	},
+	{
+		classNameColor: "Card__Bg-three",
+		title: "3. Selecciona tus regalos",
+		image: "img/step3.png",
+		textButton: "Ver catálogo",
+		link: "#",
+	},
+	{
+		classNameColor: "Card__Bg-four",
+		title: "4. Comparte tu mesa y disfruta",
+		image: "img/step4.png",
+		widthImage: "50%",
+	},
+];
+
 const WhyFunction = () => {
 	return (
-		<Section classNameColor="Bg_One">
+		<Section classNameColor="Section_Bg-one">
 			<Title text="¿Como funciona?" />
 			<br />
 			<div className="Flex_Cards">
-				<CardColor
-					className="Flex_Card_Item"
-					title="1. Elige un tipo de evento"
-					textButton="Ver tipos de eventos"
-					image="img/step1.png"
-					widthImage="80%"
-					bgColor="#ddd6e8"
-				/>
-				<CardColor
-					className="Flex_Card_Item"
-					title="2. Selecciona cómo recibir tus regalos"
-					textButton="Ver tipos de eventos"
-					image="img/step2.png"
-					widthImage="80%"
-					bgColor="#eeeeed"
-				/>
-				<CardColor
-					className="Flex_Card_Item"
-					title="3. Selecciona tus regalos"
-					textButton="Ver tipos de eventos"
-					image="img/step3.png"
-					widthImage="80%"
-					bgColor="#f5f9fc"
-				/>
-				<CardColor
-					className="Flex_Card_Item"
-					title="4. Comparte tu mesa y disfruta"
-					textButton="Ver tipos de eventos"
-					image="img/step4.png"
-					widthImage="50%"
-					bgColor="#f6e5de"
-				/>
+				{functions.map((item, index) => (
+					<CardColor
+						key={index}
+						classNameColor={item.classNameColor}
+						title={item.title}
+						image={item.image}
+						widthImage={item.widthImage}
+						textButton={item.textButton}
+					/>
+				))}
 			</div>
 		</Section>
 	);

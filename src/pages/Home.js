@@ -3,7 +3,7 @@ import React, { Fragment } from "react";
 /*Containers*/
 import Fold from "../containers/Fold";
 import Functions from "../containers/Functions";
-import CallToAction from "../containers/CallToAction";
+import Banner from "../containers/Banner";
 import Events from "../containers/Events";
 import Custommers from "../containers/Custommers";
 import Faq from "../containers/Faq";
@@ -17,8 +17,8 @@ const Home = () => {
 			{/*Why Section*/}
 			<Functions />
 
-			{/*CallToAction*/}
-			<CallToAction />
+			{/*Banner*/}
+			<Banner />
 
 			{/*Events*/}
 			<Events />

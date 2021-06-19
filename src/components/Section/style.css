@@ -1,13 +1,25 @@
-.Section {
+.Section_Container {
 	padding: 50px 100px;
 }
 
 @media (max-width: 900px) {
-	.Section {
+	.Section_Container {
 		padding: 25px 20px;
 	}
 }
 
-.Bg_One {
+.Section__Bg-one {
+	background-color: #f5f2f1;
+}
+
+.Section__Bg-two {
+	background-color: #f5f2f1;
+}
+
+.Section__Bg-three {
+	background-color: #e3eaf6;
+}
+
+.Section__Bg-four {
 	background-color: #f5f2f1;
 }

@@ -1,9 +1,0 @@
-.MiniCard_Container{
-	display: flex;
-}
-
-.MiniCard_Image{
-	width: 150px;
-	height: auto;
-	object-fit: cover;
-}
