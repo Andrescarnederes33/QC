@@ -1,0 +1,16 @@
+.Footer__Container{
+	padding: 50px 100px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.Footer__Container-item{
+	width: 100%;
+}
+
+.Footer__Container-list{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}

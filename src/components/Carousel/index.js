@@ -2,6 +2,7 @@ import React, { createRef, useEffect } from "react";
 
 /*Components*/
 import Glide from "@glidejs/glide";
+import Comment from "../Comment";
 
 /*Material Ui*/
 import IconButton from "@material-ui/core/IconButton";
@@ -58,7 +59,12 @@ export default function productsSlider(props) {
 				<ul className="glide__slides">
 					{items.map((item, index) => (
 						<li key={index} className="glide__slide px-1">
-								<img src={item.imageUrl} width="100%" alt="Item Carousel" />
+							<Comment
+								suscriptorName="Suscriptor Name"
+								title="La mejor mesa de regalos"
+								rating={5}
+								description="Some default text to fill some space, and something more"
+							/>
 						</li>
 					))}
 				</ul>

@@ -1,0 +1,17 @@
+.Comment__Container {
+	background-color: #fff;
+}
+
+.Comment__Container-box {
+	padding: 30px 10px;
+}
+
+.Comment_Container-header {
+	display: flex;
+	align-items: center;
+}
+
+.Comment_Container-subtitle {
+	display: flex;
+	flex-direction: column;
+}

@@ -8,9 +8,16 @@ import Events from "../containers/Events";
 import Custommers from "../containers/Custommers";
 import Faq from "../containers/Faq";
 
+/*Components*/
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+
 const Home = () => {
 	return (
 		<Fragment>
+
+			<Header />
+
 			{/*Fold Section*/}
 			<Fold />
 
@@ -28,6 +35,8 @@ const Home = () => {
 
 			{/*Events*/}
 			<Faq />
+
+			<Footer />
 		</Fragment>
 	);
 };

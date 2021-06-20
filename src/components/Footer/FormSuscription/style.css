@@ -1,0 +1,10 @@
+.Suscription__Container {
+	padding: 50px 100px;
+	background-color: #eb0028;
+	color: #fff;
+}
+
+.Suscription__Container-input {
+	width: 360px;
+	background-color: #fff;
+}
